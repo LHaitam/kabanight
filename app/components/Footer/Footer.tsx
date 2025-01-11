@@ -52,7 +52,7 @@ const Footer = () => {
         {/* 3rd part */}
         <div>
           <h1 className="text-[23px] font-semibold mb-[2rem] uppercase text-white">
-            Horaires d'Ouverture
+            Horaires d&apos;Ouverture
           </h1>
           <p className="text-white text-[18px]">
             Lundi - Dimanche :{" "}
