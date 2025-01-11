@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BurgerImg1 from "@/public/images/b1.png";
 import Kaba from "@/public/images/kaba.png";
 import Image from "next/image";
 
 const Hero = () => {
-  const handleOrderClick = () => {
-    const phoneNumber = "+212708232723";
-    const message = "Je souhaite commander.";
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace(
-      /-/g,
-      ""
-    )}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
+  useEffect(() => {
+      // Ajout du script uniquement une fois le composant monté
+      const script = document.createElement("script");
+      script.src = "https://www.fbgcdn.com/embedder/js/ewm2.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+  
+      return () => {
+        // Nettoyage du script pour éviter les conflits si le composant est démonté
+        document.body.removeChild(script);
+      };
+    }, []);
 
   return (
     <>
@@ -41,12 +45,14 @@ const Hero = () => {
             <h2 className="text-[18px] font-semibold text-white ">
               Craquez pour nos recettes nocturnes qui réveillent vos papilles, jusqu&apos;à l&apos;aube !
             </h2>
-            <button
-              onClick={handleOrderClick}
-              className="mt-[2rem] px-8 py-3 text-[16px] bg-orange-600 transition-all duration-200 hover:bg-[#F99A07] rounded-md text-white mx-auto block"
+            <button className="px-4 py-2 hover:bg-orange-400 transition-all duration-200 bg-orange-500 flex items-center rounded-md text-white">
+            <span
+              data-glf-cuid="d87e0da0-0c38-4f19-8749-a9cc186f08cd"
+              data-glf-ruid="8d626c73-2725-4add-a3d6-f83bc723058c"
             >
-              <span className="font-bold">Voir Menu & Commander</span>
-            </button>
+              Voir Menu & Commander
+            </span>
+          </button>
           </div>
         </div>
       </div>
