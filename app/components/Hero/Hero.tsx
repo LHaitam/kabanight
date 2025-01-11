@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="block md:hidden my-4">
               <Image src={Kaba} alt="SOBnin" className="w-full h-auto" />
             </div>
-            <h1 className="text-[40px] leading-[3rem] uppercase text-white font-bold  md:block">
+            <h1 className="text-[35px] leading-[3rem] uppercase text-white font-bold md:block">
               Quand la Faim Frappe la Nuit, <br /> On Répond Présent !
             </h1>
             <h2 className="text-[18px] font-semibold text-white ">

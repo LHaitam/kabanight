@@ -12,7 +12,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
 
   return (
     <div
-      className={`fixed ${navStyle} right-0 transition-all duration-500 left-0 top-0 bottom-0 h-[100vh] bg-[#000000e0] z-[1002]`}
+      className={`fixed ${navStyle} right-0 transition-all duration-500 left-0 top-0 bottom-0 h-[100vh] bg-orange-500 z-[1002]`}
     >
       <ImCross
         onClick={closeNav}
@@ -24,19 +24,10 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
       >
         {/* Nav Links */}
         <ul className="space-y-10">
-          <li className="text-[35px] font-medium hover:text-yellow-400 text-white">
+          <li className="text-[35px] font-medium hover:text-orange-400 text-white">
             <Link href="/">Home</Link>
           </li>
-          <li className="text-[35px] font-medium hover:text-yellow-400 text-white">
-            <Link href="/">Shop</Link>
-          </li>
-          <li className="text-[35px] font-medium hover:text-yellow-400 text-white">
-            <Link href="/">Menu</Link>
-          </li>
-          <li className="text-[35px] font-medium hover:text-yellow-400 text-white">
-            <Link href="/">Blog</Link>
-          </li>
-          <li className="text-[35px] font-medium hover:text-yellow-400 text-white">
+          <li className="text-[35px] font-medium hover:text-orange-400 text-white">
             <Link href="/">Contact</Link>
           </li>
         </ul>
